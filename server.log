@@ -1,0 +1,23 @@
+/Users/rick/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+INFO:     Started server process [72087]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+INFO:     192.168.1.185:51418 - "POST /sync HTTP/1.1" 200 OK
+A iniciar sincronização de preços...
+Usando binário do Chrome: /Applications/Google Chrome Beta.app/Contents/MacOS/Google Chrome Beta
+Preço simulado para Leite Meio-gordo 1L: 0.84€
+Preço simulado para Azeite Extra Virgem: 5.8€
+Sincronização concluída!
+INFO:     192.168.1.185:51456 - "GET /prices HTTP/1.1" 200 OK
+INFO:     192.168.1.185:51457 - "POST /sync HTTP/1.1" 200 OK
+A iniciar sincronização de preços...
+Usando binário do Chrome: /Applications/Google Chrome Beta.app/Contents/MacOS/Google Chrome Beta
+Preço simulado para Leite Meio-gordo 1L: 0.81€
+Preço simulado para Azeite Extra Virgem: 5.78€
+Sincronização concluída!
+INFO:     192.168.1.185:51531 - "GET /prices HTTP/1.1" 200 OK
+INFO:     192.168.1.185:51531 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     192.168.1.179:58633 - "GET /prices HTTP/1.1" 200 OK
+INFO:     192.168.1.179:55675 - "GET /prices HTTP/1.1" 200 OK
