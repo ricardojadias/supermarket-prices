@@ -1,0 +1,27 @@
+name: Daily Price Update
+on:
+  schedule:
+    - cron: '0 3 * * *' # Corre todos os dias às 03:00 UTC
+  workflow_dispatch: # Permite correr manualmente via botão no GitHub
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+      - name: Run Scraper
+        run: python scraper_github.py
+      - name: Commit and push changes
+        run: |
+          git config --global user.name "PriceBot"
+          git config --global user.email "bot@github.com"
+          git add prices.json
+          git commit -m "Auto-update prices [skip ci]" || echo "No changes to commit"
+          git push
